@@ -1,0 +1,133 @@
+.header-content {
+    margin: 30px 0;
+    position: relative;
+}
+
+.header-content .sub-text {
+    width: 100%;
+    text-align: right;
+    color: #efa43b;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.header-content .sub-text p {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 25px rgba(9, 48, 63, 1);
+}
+
+.header-content .sub-text a {
+    color: #fff;
+}
+
+/* Header Logo & Nav */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    width: 300px;
+    height: auto;
+    position: relative;
+    top: -10px;
+}
+
+.site-logo img {
+    width: 100%;
+}
+
+.nav-content nav {
+    flex: 1;
+    border-radius: 10px;
+}
+
+.nav-items {
+    padding: 15px 25px;
+    background-color: #fff;
+    color: #000;
+    list-style: none;
+    display: flex;
+    gap: 10px 0px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.nav-items .nav-item {
+    flex: 1;
+    text-align: end;
+}
+
+.nav-items a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Progress */
+#site-header .progress {
+    position: relative;
+}
+.progress .progress-title {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+.progress .progress-bars {
+    --progress-height: 80px;
+    --left-bar: 40%%;
+    height: var(--progress-height);
+    background: url(/src/assets/images/progress-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.progress-bars .bar {
+    height: calc(var(--progress-height) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 72%;
+    color: #fff;
+    text-transform: uppercase;
+}
+.bar>div {
+    width: var(--left-bar);
+    display: flex;
+    gap: 0px 17px;
+    justify-content: space-between;
+}
+.bar>.right {
+    width: calc(100% - var(--left-bar));
+}
+.bar .bar-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bar .bar-texts>span {
+    display: block;
+}
+
+@media screen and (min-width: 950px) {
+    .progress .progress-bars {
+        --progress-height: 120px;
+        --left-bar: 26%;
+        background-size: contain;
+    }
+
+    .progress-bars .bar {
+        font-size: 70%;
+        padding: 0 5px;
+    }
+
+    .bar>div {
+        width: var(--left-bar);
+    }
+
+    .bar>.right {
+        width: var(--left-bar);
+    }
+}

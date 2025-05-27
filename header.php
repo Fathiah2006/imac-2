@@ -7,6 +7,7 @@
  */
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,59 +19,90 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class($pureFolioBodyClass); ?>>
-    <header id="header">
-        <div class="header-c">
-            <div class="logo">
-                <a href="<?php echo get_bloginfo('wpurl'); ?>">
-                    <h1>
-                        <?php echo $siteName; ?>
-                    </h1>
-                    <span class="tagline"><?php echo bloginfo('description'); ?></span>
-                </a>
-            </div>
-
-            <nav class=" nav nav-links">
-                <div class="nav-actionBtns flexSB">
-                    <div class="actionBtns flex flexCenter">
-                        <span class="searchBtn icoBtn"> <i class='bx bx-search'></i> </span>
-                        <span class="themeBtn icoBtn"> <i class='bx bxs-moon'></i> </span>
-                    </div>
-                    <span class="menuCloseBtn icoBtn"> <i class='bx bx-x'></i> </span>
-                </div>
-                <?php
-                $menu_args = array(
-                    'menu_class' => 'links',
-                    'menu_id' => 'items',
-                    'theme_location' => 'main-nav-menu',
-                    'container' => 'div',
-                    'container_class' => 'links',
-                    'container_id' => 'items',
-                );
-                if (has_nav_menu('main-nav-menu')) {
-                    $menu_args['menu_class'] = '';
-                    $menu_args['menu_id'] = '';
-                    $menu_args['walker'] = new Custom_Nav_Menu();
-                }
-                wp_nav_menu($menu_args);
-                ?>
-            </nav>
-            
-            <div class="actionBtns flex flexCenter">
-                <span class="searchBtn icoBtn"> <i class='bx bx-search'></i> </span>
-                <span class="themeBtn icoBtn"> <i class='bx bxs-moon'></i> </span>
-                <span class="menuBtn icoBtn btn"> <i class='bx bx-menu'></i> </span>
-            </div>
-            
-            <div class="nav-overlay"></div>
-            
-            <div class="search-block flex flexCenter">
-                <div class="search-card card flex flexCenter">
-                    <span class="close-search icoBtn">
-                        <i class='bx bx-x'></i>
+<body <?php body_class(''); ?>>
+    <header id="site-header">
+        <div className="container">
+            <div id="progress" className="progress">
+                <div className="progress-title">
+                    <span>
+                        BILLION SOUL<sup>®</sup> HARVEST UPDATES
                     </span>
-                    <span class="search-title">What are you searching for?</span>
-                    <?php get_search_form(); ?>
+                </div>
+
+                <div className="progress-bars">
+                    <div className="bar saved">
+                        <div className="left">
+                            <div className="bar-texts">
+                                <span>september 2005</span>
+                                <span>1st Billion</span>
+                            </div>
+                        </div>
+
+                        <div className="right">
+                            <div className="bar-texts">
+                                <span>
+                                    Progress: {peopleSaved.toLocaleString()}
+                                </span>
+                                <span>people saved</span>
+                            </div>
+                            <div className="bar-texts">
+                                <span> Second Billion ® </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bar churches">
+                        <div className="left">
+                            <div className="bar-texts">
+                                <span>0 Churches</span>
+                            </div>
+                        </div>
+                        <div className="right">
+                            <div className="bar-texts">
+                                <span>Progress: {churches.toLocaleString()}</span>
+                            </div>
+                            <div className="bar-texts">
+                                <span> 5 Million </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div className="header-content">
+                <div className="sub-text">
+                    <p>
+                        Partner With Billion Soul • <a> Give Today </a>
+                    </p>
+                </div>
+
+                <div className="nav-content">
+                        <div className="site-logo">
+                            <img src="./h-logo.png" alt="header logo" />
+                        </div>
+
+                        <nav id="nav">
+                            <ul className="nav-items">
+                                <li className="nav-item"> 
+                                    <a href="#">Home</a>
+                                </li>
+                                <li className="nav-item"> 
+                                    <a href="#">About</a>
+                                </li>
+                                <li className="nav-item"> 
+                                    <a href="#">Services</a>
+                                </li>
+                                <li className="nav-item"> 
+                                    <a href="#">Portfolio</a>
+                                </li>
+                                <li className="nav-item"> 
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li className="nav-item"> 
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
                 </div>
             </div>
         </div>
