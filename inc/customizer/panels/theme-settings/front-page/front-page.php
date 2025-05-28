@@ -20,6 +20,8 @@ $wp_customize->add_panel($front_page_panel);
 // Hero Header Section with its settings and controls.
 include_once dirname(__FILE__) . '/hero-header.php';
 
+// Slider & Video Section with its settings and controls.
+include_once dirname(__FILE__) . '/slider-video.php';
 
 // Category Items Section with its settings and controls.
 include_once dirname(__FILE__) . '/category-items.php';

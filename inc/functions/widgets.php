@@ -2,7 +2,7 @@
 
 
 //function that registers widget areas
-function pure_commerce_widgets_init()
+function imac_widgets_init()
 {
 
     register_sidebar(array(
@@ -95,11 +95,11 @@ function pure_commerce_widgets_init()
         'after_title' => '</h4>',
     ));
 }
-add_action('widgets_init', 'pure_commerce_widgets_init');
+add_action('widgets_init', 'imac_widgets_init');
 
 
 //function to render a sidebar
-function pure_commerce_dynamic_sidebar($sidebar_id) {
+function imac_dynamic_sidebar($sidebar_id) {
     if (is_active_sidebar($sidebar_id)) :
         dynamic_sidebar($sidebar_id);
     else :

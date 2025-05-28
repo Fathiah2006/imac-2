@@ -15,7 +15,7 @@ class Slider {
 		if (splideSlider && splideSliderItems.length >= splideSliderNumber) {
 			const mySplide = new Splide(splideSlider, {
 				autoplay: true,
-				interval: 3000,
+				interval: 5000,
 				pauseOnHover: false,
 				type: "loop",
 				rewind: true,
@@ -41,7 +41,7 @@ class Main {
 	_init() {
 		// EN - If there are two or more .splide__slides in #splide
 		// jp - #splideの中の.splide__slideが2以上ある場合
-		new Slider("#slide-banner", ".splide__slide", "2");
+		new Slider("#fp-slider", ".splide__slide", "2");
 		new Slider("#slide-banner-mobile", ".splide__slide__mobile", "2");
 	}
 }

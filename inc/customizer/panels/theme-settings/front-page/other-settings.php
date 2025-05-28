@@ -8,7 +8,7 @@ global $wp_customize;
 $wp_customize->add_section(
     'other_settings',
     array(
-        'title'    => __('Other Settings', 'pure-commerce'),
+        'title'    => __('Other Settings', 'imac-france'),
         'description' => esc_html__('Other settings for the front page'),
         'priority' => 200,
         'panel' => 'frontpage_panel_id',
@@ -28,16 +28,16 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     'title_text_transform',
     array(
-        'label' => __('Transform Title', 'pure-commerce'),
+        'label' => __('Transform Title', 'imac-france'),
         'description' => esc_html__('Make The title to be in either all caps or all small letters'),
         'type' => 'radio',
         'section'  => 'other_settings',
         'settings'   => 'title_text_transform', //pick the setting it applies to
         'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
         'choices' => array(
-            'capitalize' => __('Capitalize', 'pure-commerce'),
-            'uppercase' => __('Uppercase', 'pure-commerce'),
-            'lowercase' => __('Lowercase', 'pure-commerce'),
+            'capitalize' => __('Capitalize', 'imac-france'),
+            'uppercase' => __('Uppercase', 'imac-france'),
+            'lowercase' => __('Lowercase', 'imac-france'),
         ),
     )
 );

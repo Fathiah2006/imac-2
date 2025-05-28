@@ -19,7 +19,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
     'pages_hero_header_img',
     array(
-        'default' => get_pure_commerce_assets('img') . 'pages-img.jpg',
+        'default' => get_imac_assets('img') . 'pages-img.jpg',
         'transport' => 'refresh',
         'sanitize_callback' => 'esc_url_raw'
     )

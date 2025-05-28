@@ -117,16 +117,24 @@ if ( ! class_exists( 'PC_Theme_Mods' ) ) {
         public function get_front_page_mods() {
             $defaults = $this->defaults;
             return array(
-                'toggle_hero_header_sec'        => get_theme_mod('toggle_hero_header_sec', $defaults['toggle_hero_header_sec'] ),
-                'hero_header_sec_img'           => get_theme_mod('hero_header_sec_img', $defaults['hero_header_sec_img'] ),
-                'hero_header_sec_title'         => get_theme_mod('hero_header_sec_title', $defaults['hero_header_sec_title'] ),
-                'hero_header_sec_subtext'       => get_theme_mod('hero_header_sec_subtext', $defaults['hero_header_sec_subtext'] ),
-                'toggle_hero_header_sec_btn'    => get_theme_mod('toggle_hero_header_sec_btn', $defaults['toggle_hero_header_sec_btn']),
-                'hero_header_sec_btn_url'       => get_theme_mod('hero_header_sec_btn_url', $defaults['hero_header_sec_btn_url']),
-                'hero_header_sec_btn_text'      => get_theme_mod('hero_header_sec_btn_text', $defaults['hero_header_sec_btn_text']),
-                'toggle_cat_items_sec'          => get_theme_mod('toggle_cat_items_sec', $defaults['toggle_cat_items_sec']),
-                'toggle_popular_items_sec'      => get_theme_mod('toggle_popular_items_sec', $defaults['toggle_popular_items_sec']),
-                'toggle_latest_items_sec'       => get_theme_mod('toggle_latest_items_sec', $defaults['toggle_latest_items_sec']),
+                'toggle_hero_header_sec'        => get_theme_mod( 'toggle_hero_header_sec', $defaults['toggle_hero_header_sec'] ),
+                'hero_header_sec_img'           => get_theme_mod( 'hero_header_sec_img', $defaults['hero_header_sec_img'] ),
+                'hero_header_sec_title'         => get_theme_mod( 'hero_header_sec_title', $defaults['hero_header_sec_title'] ),
+                'hero_header_sec_subtext'       => get_theme_mod( 'hero_header_sec_subtext', $defaults['hero_header_sec_subtext'] ),
+                'toggle_hero_header_sec_btn'    => get_theme_mod( 'toggle_hero_header_sec_btn', $defaults['toggle_hero_header_sec_btn']),
+                'hero_header_sec_btn_url'       => get_theme_mod( 'hero_header_sec_btn_url', $defaults['hero_header_sec_btn_url']),
+                'hero_header_sec_btn_text'      => get_theme_mod( 'hero_header_sec_btn_text', $defaults['hero_header_sec_btn_text']),
+                
+                'toggle_slider_video_sec'       => get_theme_mod( 'toggle_slider_video_sec', $defaults['toggle_slider_video_sec'] ),
+                'fp_slider_img1'                => get_theme_mod( 'fp_slider_img1', $defaults['fp_slider_img1']),
+                'fp_slider_img2'                => get_theme_mod( 'fp_slider_img2', $defaults['fp_slider_img2']),
+                'fp_slider_img3'                => get_theme_mod( 'fp_slider_img3', $defaults['fp_slider_img3']),
+                'fp_slider_img4'                => get_theme_mod( 'fp_slider_img4', $defaults['fp_slider_img4']),
+                'fp_video_showcase'             => wp_get_attachment_url(get_theme_mod('fp_video_showcase')),
+
+                'toggle_cat_items_sec'          => get_theme_mod( 'toggle_cat_items_sec', $defaults['toggle_cat_items_sec']) ,
+                'toggle_popular_items_sec'      => get_theme_mod( 'toggle_popular_items_sec', $defaults['toggle_popular_items_sec']) ,
+                'toggle_latest_items_sec'       => get_theme_mod( 'toggle_latest_items_sec', $defaults['toggle_latest_items_sec']) ,
 
                 'toggle_frontpage_sidebar'      => get_theme_mod('toggle_frontpage_sidebar', $defaults['toggle_frontpage_sidebar']),
             );

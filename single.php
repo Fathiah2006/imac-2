@@ -10,6 +10,3 @@
 
 get_header();
 
-get_template_part('template-parts/single-page', get_post_format());
-
-get_footer();

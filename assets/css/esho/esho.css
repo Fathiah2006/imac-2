@@ -77,10 +77,10 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    --body-bg-clr: #F4F6F8de;
-    --body-txt-clr: #444;
-    --box-bg-clr: #ffffffcc;
-    --box-bg-clr-solid: #ffffff;
+    --body-bg-clr: #252424de;
+    --body-txt-clr: #F4F6F8;
+    --box-bg-clr: #444444cc;
+    --box-bg-clr-solid: #444444;
     --tertiary-clr: #59626f;
     --brightness: brightness(100%) contrast(1);
 }

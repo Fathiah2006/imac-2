@@ -8,8 +8,8 @@ global $wp_customize;
 $wp_customize->add_section(
     'hero_header_Sec',
     array(
-        'title'    => __("Hero Header Section", "pure-commerce"),
-        'description' => esc_html__("Customize the stunning hero header that captures attention on your front page. This section empowers you to control the hero header's visibility, background image, main title, subtext, and button settings. Create an impactful first impression with your website's hero section.", "pure-commerce"),
+        'title'    => __("Hero Header Section", "imac-france"),
+        'description' => esc_html__("Customize the stunning hero header that captures attention on your front page. This section empowers you to control the hero header's visibility, background image, main title, subtext, and button settings. Create an impactful first impression with your website's hero section.", "imac-france"),
         'priority' => 10,
         'panel' => 'frontpage_panel_id',
     )
@@ -29,8 +29,8 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     $wp_customize,
     'toggle_hero_header_sec',
     array(
-        'label' => __('Hero Header', 'pure-commerce'),
-        'description' => esc_html__('Toggle the display of the Hero Header on the front page', 'pure-commerce'),
+        'label' => __('Hero Header', 'imac-france'),
+        'description' => esc_html__('Toggle the display of the Hero Header on the front page', 'imac-france'),
         'section' => 'hero_header_Sec',
         'settings'   => 'toggle_hero_header_sec',
         'capability' => 'edit_theme_options',
@@ -51,8 +51,8 @@ $wp_customize->add_control(new WP_Customize_Image_Control(
     $wp_customize,
     'hero_header_sec_img',
     array(
-        'label' => __('Hero Header Background Image', 'pure-commerce'),
-        'description' => esc_html__('Choose the background image for your hero header.', 'pure-commerce'),
+        'label' => __('Hero Header Background Image', 'imac-france'),
+        'description' => esc_html__('Choose the background image for your hero header.', 'imac-france'),
         'section' => 'hero_header_Sec',
         'settings' => 'hero_header_sec_img',
         'button_labels' => array( // Optional.
@@ -80,8 +80,8 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     'hero_header_sec_title',
     array(
-        'label' => __("Title", 'pure-commerce'),
-        'description' => __('Customize the main title or headline for your Hero Header.', 'pure-commerce'),
+        'label' => __("Title", 'imac-france'),
+        'description' => __('Customize the main title or headline for your Hero Header.', 'imac-france'),
         'settings' => 'hero_header_sec_title',
         'section' => 'hero_header_Sec',
         'type' => 'text',
@@ -101,8 +101,8 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     'hero_header_sec_subtext',
     array(
-        'label' => __("Hero Header Subtext", 'pure-commerce'),
-        'description' => __('Add a brief description or subtext for your Hero Header.', 'pure-commerce'),
+        'label' => __("Hero Header Subtext", 'imac-france'),
+        'description' => __('Add a brief description or subtext for your Hero Header.', 'imac-france'),
         'settings' => 'hero_header_sec_subtext',
         'section' => 'hero_header_Sec',
         'type' => 'text',
@@ -122,7 +122,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     'toggle_hero_header_sec_btn',
     array(
         'label' => "Hero Header Button",
-        'description' => __('Disable or Enable a button on the Hero Header', 'pure-commerce'),
+        'description' => __('Disable or Enable a button on the Hero Header', 'imac-france'),
         'section' => 'hero_header_Sec',
         'settings' => 'toggle_hero_header_sec_btn',
     )
@@ -141,7 +141,7 @@ $wp_customize->add_control(new Clarusmod_Url_Custom_Control(
     $wp_customize,
     'hero_header_sec_btn_url',
     array(
-        'label' => __("Hero Header Button Url", 'pure-commerce'),
+        'label' => __("Hero Header Button Url", 'imac-france'),
         'description' => __('Enter The URL for the Button on the Hero Header.'),
         'section' => 'hero_header_Sec',
         'settings' => 'hero_header_sec_btn_url',
@@ -161,8 +161,8 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     'hero_header_sec_btn_text',
     array(
-        'label' => __("Button Text", 'pure-commerce'),
-        'description' => __('Customize the text displayed on the Hero Header button', 'pure-commerce'),
+        'label' => __("Button Text", 'imac-france'),
+        'description' => __('Customize the text displayed on the Hero Header button', 'imac-france'),
         'settings' => 'hero_header_sec_btn_text',
         'section' => 'hero_header_Sec',
         'type' => 'text',

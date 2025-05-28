@@ -5,25 +5,25 @@
  *
  * @author Emmanuel Olowu 
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @package pure-commerce
+ * @package imac
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( !function_exists( 'pure_commerce_setup' ) ) {
+if ( !function_exists( 'imac_setup' ) ) {
     /*--------------------------------------------------------------------------------
-	pure_commerce_setup - sets up theme
+	imac_setup - sets up theme
 	- adds theme support for post formats, post thumbnails, HTML5 and automatic feed links
 	- registers a translation file
 	- registers navigation menus
 	---------------------------------------------------------------------------------*/
 
-    function pure_commerce_setup()
+    function imac_setup()
     {
         // Load TextDomain.
-        load_theme_textdomain( 'pure-commerce' );
+        load_theme_textdomain( IMAC_TXT_DOMAIN );
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support( 'automatic-feed-links' );
@@ -32,7 +32,7 @@ if ( !function_exists( 'pure_commerce_setup' ) ) {
         add_theme_support( 'post-formats', array('aside', 'image', 'link', 'quote', 'status') );
 
         // use wp_nav_menu() in one location.
-        register_nav_menu( 'primary', __('Primary Menu', 'pure-commerce') );
+        register_nav_menu( 'primary', __('Primary Menu', 'imac') );
 
         // HTML5
         add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
@@ -63,7 +63,7 @@ if ( !function_exists( 'pure_commerce_setup' ) ) {
         create_and_set_pages();
     }
 }
-add_action( 'after_setup_theme', 'pure_commerce_setup' );
+add_action( 'after_setup_theme', 'imac_setup' );
 
 // REMOVE WP-EMOJI JAVASCRIPT & CSS
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

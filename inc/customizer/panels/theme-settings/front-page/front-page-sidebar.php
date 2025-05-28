@@ -8,8 +8,8 @@ global $wp_customize;
 $wp_customize->add_section(
     'front_page_sidebar',
     array(
-        'title'    => __( 'Sidebar Settings', 'pure-commerce') ,
-        'description' => esc_html__('customizer the sidebar on the Front page. Visit the front page / Home  to see your changes reflect there.', 'pure-commerce'),
+        'title'    => __( 'Sidebar Settings', 'imac-france') ,
+        'description' => esc_html__('customizer the sidebar on the Front page. Visit the front page / Home  to see your changes reflect there.', 'imac-france'),
         'priority' => 100,
         'panel' => 'frontpage_panel_id',
     )
@@ -29,8 +29,8 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     $wp_customize,
     'toggle_frontpage_sidebar',
     array(
-        'label' => __( 'Sidebar', 'pure-commerce' ),
-        'description' => esc_html__( 'Use this toggle to Disable or Enable the Sidebar on the blog page.', 'pure-commerce' ),
+        'label' => __( 'Sidebar', 'imac-france' ),
+        'description' => esc_html__( 'Use this toggle to Disable or Enable the Sidebar on the blog page.', 'imac-france' ),
         'section'  => 'front_page_sidebar',
         'settings'   => 'toggle_frontpage_sidebar',
     )
