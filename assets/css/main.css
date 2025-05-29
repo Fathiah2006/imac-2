@@ -121,3 +121,49 @@ body::before {
     font-weight: 600;
     line-height: 20px;
 }
+
+
+.none-card {
+    width: 100%;
+    padding: 40px 8px;
+    text-align: center;
+    background: var(--box-bg-clr);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+.none-card>* {
+    display: block;
+}
+.none-card>* {
+    display: block;
+}
+.none-card>label {
+    font-size: 1.4em;
+    margin: 15px 0 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.none-card>label::after {
+    content: "";
+    display: block;
+    margin: 15px auto;
+    width: 10%;
+    border-radius: 31px;
+    border: 2px solid var(--theme-clr);
+    transition: var(--transition);
+}
+.none-card:hover>label::after {
+    width: 30%;
+}
+.none-card .btn {
+    margin: 10px auto;
+    font-family: var(--font-four);
+    font-size: .95em;
+    display: inline-block;
+}
+@media screen and (min-width: 550px) {
+    .none-card {
+        width: 400px;
+    }
+}

@@ -23,6 +23,12 @@ include_once dirname(__FILE__) . '/hero-header.php';
 // Slider & Video Section with its settings and controls.
 include_once dirname(__FILE__) . '/slider-video.php';
 
+// Web Portals Section with its settings and controls.
+include_once dirname(__FILE__) . '/web-portals.php';
+
+// Web Portals Section with its settings and controls.
+include_once dirname(__FILE__) . '/partners.php';
+
 // Category Items Section with its settings and controls.
 include_once dirname(__FILE__) . '/category-items.php';
 

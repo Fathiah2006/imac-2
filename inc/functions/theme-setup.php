@@ -41,7 +41,7 @@ if ( !function_exists( 'imac_setup' ) ) {
         add_theme_support( 'title-tag' );
 
         // Enable support for Post Thumbnails on posts and pages.
-        add_theme_support( 'post-thumbnails', array( 'post', 'page', 'events', 'gallery', 'portfolios' ) );
+        add_theme_support( 'post-thumbnails', array( 'post', 'page', 'web_portals', 'partners' ) );
 
         // Set up the WordPress core custom background feature.
         $defaults = array(

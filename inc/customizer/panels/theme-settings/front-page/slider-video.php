@@ -3,7 +3,7 @@
 global $wp_customize;
 
 /**======================================================
- * CREATE SECTION TO MODIFY THE FRONTPAGE'S HERO HEADER SECTION
+ * CREATE SECTION TO MODIFY THE FRONTPAGE'S SLIDER & VIDEO SECTION
 ========================================================*/
 $wp_customize->add_section(
     'slider_video_sec',

@@ -23,8 +23,15 @@ global $pc_theme_mods;
             get_template_part('template-parts/front-page/slider-video', get_post_format());
         }
 
+        if ($pc_theme_mods['toggle_web_portals_sec'] == true) {
+            get_template_part('template-parts/front-page/web-portals', get_post_format());
+        }
+
+        if ($pc_theme_mods['toggle_partners_sec'] == true) {
+            get_template_part('template-parts/front-page/partners', get_post_format());
+        }
+
         get_template_part('template-parts/front-page/showcase-section', get_post_format());
 
-        
     ?>
 </section>

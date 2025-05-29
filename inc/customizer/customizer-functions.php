@@ -26,13 +26,6 @@ if (!function_exists('pc_customizer_defaults')) {
             'toggle_footer_dev_credits'     => true,
             'toggle_footer_platform_info'   => true,
 
-            'toggle_slider_video_sec'       => true,
-            'fp_slider_img1'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
-            'fp_slider_img2'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
-            'fp_slider_img3'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
-            'fp_slider_img4'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
-            'fp_video_showcase'             => "https://codingyaar.com/wp-content/uploads/video-in-bootstrap-card.mp4",
-
             'toggle_hero_header_sec'        => false,
             'hero_header_sec_img'           => get_imac_assets('img') . 'gadget.jpg',
             'hero_header_sec_title'         => __('Stay ahead of the curve with our forward thinking.', 'imac'),
@@ -40,6 +33,18 @@ if (!function_exists('pc_customizer_defaults')) {
             'toggle_hero_header_sec_btn'    => true,
             'hero_header_sec_btn_url'       => '#',
             'hero_header_sec_btn_text'      => __('Get in touch', 'imac'),
+            
+            'toggle_slider_video_sec'       => true,
+            'fp_slider_img1'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
+            'fp_slider_img2'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
+            'fp_slider_img3'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
+            'fp_slider_img4'                => get_imac_assets( 'img' ) . 'placeholder.jpg',
+            'fp_video_showcase'             => 'https://codingyaar.com/wp-content/uploads/video-in-bootstrap-card.mp4',
+            
+            'toggle_web_portals_sec'        => true,
+            
+            'toggle_partners_sec'           => true,
+            
             'toggle_cat_items_sec'          => true,
             'toggle_popular_items_sec'      => true,
             'toggle_latest_items_sec'       => true,

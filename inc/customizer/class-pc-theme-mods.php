@@ -126,11 +126,15 @@ if ( ! class_exists( 'PC_Theme_Mods' ) ) {
                 'hero_header_sec_btn_text'      => get_theme_mod( 'hero_header_sec_btn_text', $defaults['hero_header_sec_btn_text']),
                 
                 'toggle_slider_video_sec'       => get_theme_mod( 'toggle_slider_video_sec', $defaults['toggle_slider_video_sec'] ),
-                'fp_slider_img1'                => get_theme_mod( 'fp_slider_img1', $defaults['fp_slider_img1']),
-                'fp_slider_img2'                => get_theme_mod( 'fp_slider_img2', $defaults['fp_slider_img2']),
-                'fp_slider_img3'                => get_theme_mod( 'fp_slider_img3', $defaults['fp_slider_img3']),
-                'fp_slider_img4'                => get_theme_mod( 'fp_slider_img4', $defaults['fp_slider_img4']),
-                'fp_video_showcase'             => wp_get_attachment_url(get_theme_mod('fp_video_showcase')),
+                'fp_slider_img1'                => get_theme_mod( 'fp_slider_img1', $defaults['fp_slider_img1'] ),
+                'fp_slider_img2'                => get_theme_mod( 'fp_slider_img2', $defaults['fp_slider_img2'] ),
+                'fp_slider_img3'                => get_theme_mod( 'fp_slider_img3', $defaults['fp_slider_img3'] ),
+                'fp_slider_img4'                => get_theme_mod( 'fp_slider_img4', $defaults['fp_slider_img4'] ),
+                'fp_video_showcase'             => wp_get_attachment_url( get_theme_mod('fp_video_showcase') ),
+
+                'toggle_web_portals_sec'        => get_theme_mod( 'toggle_web_portals_sec', $defaults['toggle_web_portals_sec']),
+
+                'toggle_partners_sec'           => get_theme_mod( 'toggle_partners_sec', $defaults['toggle_partners_sec'] ),
 
                 'toggle_cat_items_sec'          => get_theme_mod( 'toggle_cat_items_sec', $defaults['toggle_cat_items_sec']) ,
                 'toggle_popular_items_sec'      => get_theme_mod( 'toggle_popular_items_sec', $defaults['toggle_popular_items_sec']) ,

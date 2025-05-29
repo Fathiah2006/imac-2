@@ -10,4 +10,4 @@
 require_once dirname(__FILE__) . '/frontpage.php';
 
 // MISC UI TEMPLATE FUNCTION
-require_once dirname(__FILE__) . '/ui-components/index.php';
+require_once dirname(__FILE__) . '/components/index.php';

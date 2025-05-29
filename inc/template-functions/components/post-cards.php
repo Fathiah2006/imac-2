@@ -51,3 +51,34 @@ function get_blog_card($card_style = '')
         </div>
     </article>
 <?php }
+
+
+function get_web_portal_card() {
+    // Get the permalink and title once
+    $post_url = get_permalink();
+    $post_title = get_the_title();
+
+    ?>
+    <article class="card portal-card">
+        <div class="card-img fit-img">
+            <a href="<?php echo esc_url($post_url); ?>" aria-label="<?php echo esc_attr($post_title); ?>" title="<?php echo esc_attr($post_title); ?>">
+                <?php theme_post_thumb(); ?>
+            </a>
+        </div>
+    </article>
+    <?php
+}
+
+function get_fp_partner_card() {
+    // Get the permalink and title once
+    $post_url = get_permalink();
+    $post_title = get_the_title();
+    
+    ?>
+    <div class="partner-card splide__slide">
+        <div class="splide__img fit-img">
+            <?php theme_post_thumb(); ?>
+        </div>
+    </div>
+    <?php
+}

@@ -44,6 +44,9 @@ require_once IMAC_THEME_DIR . 'inc/functions/enqueues.php';
 // LazyLoad Images.
 require_once IMAC_THEME_DIR . 'inc/functions/lazyload.php';
 
+// Custom Post Types (CPT)
+require get_template_directory() . '/inc/custom-post-types/index.php';
+
 // Load Customizer
 include_once IMAC_THEME_DIR . 'inc/customizer/customizer.php';
 
