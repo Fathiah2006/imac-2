@@ -36,6 +36,7 @@
     position: absolute;
     top: -10px;
     left: 0;
+    z-index: 90;
 }
 
 .site-logo img {
@@ -45,8 +46,10 @@
 .nav-content nav {
     border-radius: 10px;
     width: 100%;
+    position: relative;
 }
 
+#nav>ul,
 .nav-items {
     padding: 15px 25px;
     background-color: #fff;
@@ -61,10 +64,12 @@
     justify-content: right;
 }
 
-.nav-items .nav-item {
-    position: relative;
+#nav>ul li,
+.nav-items li {
+    position: initial;
 }
 
+#nav>ul a,
 .nav-items a {
     color: inherit;
     text-decoration: none;
@@ -73,8 +78,26 @@
     line-height: 18px;
     letter-spacing: 1px;
 }
+#nav>ul a:hover,
 .nav-items a:hover {
     color: var(--theme-clr);
+}
+.nav-items li ul.sub-menu {
+    z-index: 80;
+    position: absolute;
+    left: 0;
+    top: 54px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 80;
+    border-radius: 15px;
+    padding: 50px 30px 30px;
+    list-style: none;
+    visibility: hidden;
+}
+.nav-items li ul.sub-menu.open {
+    display: block;
+    visibility: visible;
 }
 
 /* Progress */

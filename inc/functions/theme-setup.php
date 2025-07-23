@@ -65,6 +65,19 @@ if ( !function_exists( 'imac_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'imac_setup' );
 
+// register nav menus
+if ( !function_exists( 'imac_menu' ) ) {
+    function imac_menu() {
+        register_nav_menus(
+            array(
+                'main-nav-menu' => __( 'Main Menu' ),
+                'footer-menu' => __( 'Footer Menu' )
+            )
+        );
+    }
+}
+add_action( 'init', 'imac_menu' );
+
 // REMOVE WP-EMOJI JAVASCRIPT & CSS
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );

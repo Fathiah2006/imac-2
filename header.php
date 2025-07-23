@@ -7,8 +7,8 @@
  */
 
 
-global $pc_theme_mods, $pure_commerce_body_classes;
-$pc_theme_mods = pc_get_theme_mods();
+global $imac_theme_mods, $pure_commerce_body_classes;
+$imac_theme_mods = imac_get_theme_mods();
 
 ?>
 <!DOCTYPE html>
@@ -84,28 +84,22 @@ $pc_theme_mods = pc_get_theme_mods();
                             <img src="http://localhost:94/wp/wp-content/themes/imac-2/assets/img/h-logo.png" alt="header logo" />
                         </div>
 
-                        <nav id="nav">
-                            <ul class="nav-items">
-                                <li class="nav-item"> 
-                                    <a href="#">Home</a>
-                                </li>
-                                <li class="nav-item"> 
-                                    <a href="#">About</a>
-                                </li>
-                                <li class="nav-item"> 
-                                    <a href="#">Networking</a>
-                                </li>
-                                <li class="nav-item"> 
-                                    <a href="#">Resources</a>
-                                </li>
-                                <li class="nav-item"> 
-                                    <a href="#">Contact</a>
-                                </li>
-                                <li class="nav-item"> 
-                                    <a href="#">Give Today</a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <?php
+                            $menu_args = array(
+                                'menu_class' => 'nav-items',
+                                'menu_id' => 'nav',
+                                'theme_location' => 'main-nav-menu',
+                                'container' => 'nav',
+                                'container_class' => 'nav',
+                                'container_id' => 'nav',
+                            );
+                            if (has_nav_menu('main-nav-menu')) {
+                                $menu_args['menu_class'] = 'nav-items';
+                                $menu_args['menu_id'] = '';
+                                $menu_args['walker'] = new Custom_Walker_Nav_Menu();
+                            }
+                            wp_nav_menu($menu_args);
+                        ?>
                 </div>
             </div>
         </div>

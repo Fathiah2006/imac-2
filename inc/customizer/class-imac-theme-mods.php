@@ -29,7 +29,7 @@ if ( ! class_exists( 'PC_Theme_Mods' ) ) {
          * Constructor
          */
         public function __construct() {
-            $this->defaults = pc_customizer_defaults();
+            $this->defaults = imac_customizer_defaults();
 
             add_action( 'after_setup_theme', array( $this, 'refresh_theme_mods' ) );
         }
@@ -182,7 +182,7 @@ if ( ! class_exists( 'PC_Theme_Mods' ) ) {
          * Current wp page mods
          */
         public function get_current_page_mods( $post = '' ) {
-            $pub_page_ids = pc_get_customizer_pages_ids();
+            $pub_page_ids = imac_get_customizer_pages_ids();
 
             // Ensure $post is properly initialized
             if ( !isset( $post ) || !is_a( $post, 'WP_Post' ) ) {
@@ -195,7 +195,7 @@ if ( ! class_exists( 'PC_Theme_Mods' ) ) {
                 // get the current page ID from wp global $post object
                 $current_page_id = $post->ID;
 
-                $pc_page_mods = array(
+                $imac_page_mods = array(
                     // default mods for pages
                     'pages_hero_header_img'         => get_theme_mod( 'pages_hero_header_img', get_imac_assets( 'img' ) . 'pages-img.jpg'),
                     'toggle_pages_featured_img'     => get_theme_mod( 'toggle_pages_featured_img', false ),
@@ -204,19 +204,13 @@ if ( ! class_exists( 'PC_Theme_Mods' ) ) {
                 // Check if current page ID exist in $pub_page_ids array
                 if ( in_array( $current_page_id, $pub_page_ids ) ) {
                     // get theme mods for the current page
-                    $pc_page_mods['toggle_hero_header'] = get_theme_mod( 'toggle_hero_header_' . $current_page_id, true );
-                    $pc_page_mods['hero_header_img'] = get_theme_mod( 'hero_header_img_' . $current_page_id, '' );
-                    $pc_page_mods['hero_header_subtext'] = get_theme_mod( 'hero_header_subtext_' . $current_page_id, '' );
-                    $pc_page_mods['toggle_sidebar'] = get_theme_mod( 'toggle_sidebar_' . $current_page_id, true );
+                    $imac_page_mods['toggle_sidebar'] = get_theme_mod( 'toggle_sidebar_' . $current_page_id, true );
                 } else {
                     // Set default values
-                    $pc_page_mods['toggle_hero_header'] = true;
-                    $pc_page_mods['hero_header_img'] = '';
-                    $pc_page_mods['hero_header_subtext'] = '';
-                    $pc_page_mods['toggle_sidebar'] = true;
+                    $imac_page_mods['toggle_sidebar'] = true;
                 }
 
-                return apply_filters( 'pc_page_theme_mods', $pc_page_mods );
+                return apply_filters( 'imac_page_theme_mods', $imac_page_mods );
             }
         }
     }
@@ -225,15 +219,17 @@ if ( ! class_exists( 'PC_Theme_Mods' ) ) {
 /**
  * Kicking this off by object
  */
-function pc_get_theme_mods() {
+function imac_get_theme_mods() {
     return PC_Theme_Mods::get_instance()->get_all_theme_mods();
 }
 
-function pc_get_current_page_mods( $post ) {
+function imac_get_current_page_mods( $post ) {
     return PC_Theme_Mods::get_instance()->get_current_page_mods( $post );
 }
 
-global $pc_theme_mods;
-$pc_theme_mods = pc_get_theme_mods();
+global $imac_theme_mods;
+$imac_theme_mods = imac_get_theme_mods();
 
-global $current_page_theme_mods;
+
+global $current_page_theme_mods, $post;
+$current_page_theme_mods = imac_get_current_page_mods( $post );

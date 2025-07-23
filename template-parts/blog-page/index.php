@@ -9,8 +9,8 @@
 
 */
 
-global $pc_theme_mods;
-$main_sec_width = ($pc_theme_mods['toggle_blog_sidebar'] == true) ? 'col-8' : 'col-12';
+global $imac_theme_mods;
+$main_sec_width = ($imac_theme_mods['toggle_blog_sidebar'] == true) ? 'col-8' : 'col-12';
 
 ?>
 
@@ -23,7 +23,7 @@ $main_sec_width = ($pc_theme_mods['toggle_blog_sidebar'] == true) ? 'col-8' : 'c
             ?>
         </section>
     
-        <?php if ($pc_theme_mods['toggle_blog_sidebar']) { ?>
+        <?php if ($imac_theme_mods['toggle_blog_sidebar']) { ?>
             <section class="col-4 side">
                 <?php
                 get_sidebar(); // The Side Bar. 

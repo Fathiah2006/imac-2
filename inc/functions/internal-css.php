@@ -6,21 +6,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function internal_css()
 {
-    global $pc_theme_mods;
-    $pc_theme_mods = pc_get_theme_mods();
+    global $imac_theme_mods;
+    $imac_theme_mods = imac_get_theme_mods();
 
-    $header_txt_color = !empty($pc_theme_mods['header_text_color']) ? $pc_theme_mods['header_text_color'] : 'var(--body-txt-clr)';
-    $header_bg_color = !empty($pc_theme_mods['header_bg_color']) ? $pc_theme_mods['header_bg_color'] : 'var(--box-bg-clr-solid)';
+    $header_txt_color = !empty($imac_theme_mods['header_text_color']) ? $imac_theme_mods['header_text_color'] : 'var(--body-txt-clr)';
+    $header_bg_color = !empty($imac_theme_mods['header_bg_color']) ? $imac_theme_mods['header_bg_color'] : 'var(--box-bg-clr-solid)';
 
     // To check If Uppercase is set for the nav items
-    $navbar_case_mod  = $pc_theme_mods['nav_text_transform'];
+    $navbar_case_mod  = $imac_theme_mods['nav_text_transform'];
     $navbar_case = ($navbar_case_mod == 'capitalize') ? 'capitalize' : (($navbar_case_mod == 'uppercase') ? 'uppercase' : 'lowercase');
 
-    $title_case_mod  = $pc_theme_mods['title_text_transform'];
+    $title_case_mod  = $imac_theme_mods['title_text_transform'];
     $title_case = ($title_case_mod == 'capitalize') ? 'capitalize' : (($title_case_mod == 'uppercase') ? 'uppercase' : 'lowercase');
 
-    $footer_txt_color = !empty($pc_theme_mods['footer_text_color']) ? $pc_theme_mods['footer_text_color'] : 'var(--body-txt-clr)';
-    $footer_bg_color = !empty($pc_theme_mods['footer_bg_color']) ? $pc_theme_mods['footer_bg_color'] : 'var(--box-bg-clr-solid)';
+    $footer_txt_color = !empty($imac_theme_mods['footer_text_color']) ? $imac_theme_mods['footer_text_color'] : 'var(--body-txt-clr)';
+    $footer_bg_color = !empty($imac_theme_mods['footer_bg_color']) ? $imac_theme_mods['footer_bg_color'] : 'var(--box-bg-clr-solid)';
 
     $admin_bar = is_admin_bar_showing();
 
@@ -36,20 +36,20 @@ function internal_css()
         .no-hero #header, .header-bg {
             --header-text-color: ' . $header_txt_color . ' !important;
             --header-background-color: ' . $header_bg_color . ' !important;
-            --header-background-image: url(' . $pc_theme_mods['header_bg_image'] . ');
+            --header-background-image: url(' . $imac_theme_mods['header_bg_image'] . ');
         }
         body {
-            --theme-clr: ' . $pc_theme_mods['pure_commerce_theme_color'] . ';
-            --theme-clr-trans: ' . $pc_theme_mods['pure_commerce_theme_color'] . '91;
+            --theme-clr: ' . $imac_theme_mods['pure_commerce_theme_color'] . ';
+            --theme-clr-trans: ' . $imac_theme_mods['pure_commerce_theme_color'] . '91;
             --footer-txt-clr: ' . $footer_txt_color . ' !important;
             --footer-bg-clr: ' . $footer_bg_color . ' !important;
-            --footer-bg-image: url(' . $pc_theme_mods['footer_bg_image'] . ');
+            --footer-bg-image: url(' . $imac_theme_mods['footer_bg_image'] . ');
             --title-text-transform: ' . $title_case . ';
             --navbar-text-transform: ' . $navbar_case . ';
         }';
     
     // If custom background color is not set
-    if ( !$pc_theme_mods['background_color'] ) { 
+    if ( !$imac_theme_mods['background_color'] ) { 
         echo 'body { background-color: var(--body-bg-clr); }';
     }
 
@@ -74,18 +74,18 @@ add_action('wp_head', 'internal_css');
 function single_page_internal_css()
 {
     if (is_single() || is_page()) {
-        global $pc_theme_mods;
+        global $imac_theme_mods;
 
-        $toggle_excerpt_italics  = $pc_theme_mods['toggle_excerpt_italics']; // check if excerpt on single page is set to italics
+        $toggle_excerpt_italics  = $imac_theme_mods['toggle_excerpt_italics']; // check if excerpt on single page is set to italics
         $excerpt_font_style = ($toggle_excerpt_italics == true) ? 'italic' : 'normal';
 
-        $toggle_share_btns = $pc_theme_mods['toggle_share_btns']; // Value to check if share button is enabled
-        $pinterest = $pc_theme_mods['toggle_pinterest_btn']; // Value to check if pinterest button is enabled
-        $facebook = $pc_theme_mods['toggle_facebook_btn']; // Value to check if facebook button is enabled
-        $whatsapp = $pc_theme_mods['toggle_whatsapp_btn']; // Value to check if whatsapp button is enabled
-        $telegram = $pc_theme_mods['toggle_telegram_btn']; // Value to check if telegram button is enabled
-        $linkedin = $pc_theme_mods['toggle_linkedin_btn']; // Value to check if linkedin button is enabled
-        $x = $pc_theme_mods['toggle_x_btn']; // Value to check if twitter button is enabled
+        $toggle_share_btns = $imac_theme_mods['toggle_share_btns']; // Value to check if share button is enabled
+        $pinterest = $imac_theme_mods['toggle_pinterest_btn']; // Value to check if pinterest button is enabled
+        $facebook = $imac_theme_mods['toggle_facebook_btn']; // Value to check if facebook button is enabled
+        $whatsapp = $imac_theme_mods['toggle_whatsapp_btn']; // Value to check if whatsapp button is enabled
+        $telegram = $imac_theme_mods['toggle_telegram_btn']; // Value to check if telegram button is enabled
+        $linkedin = $imac_theme_mods['toggle_linkedin_btn']; // Value to check if linkedin button is enabled
+        $x = $imac_theme_mods['toggle_x_btn']; // Value to check if twitter button is enabled
 
         echo '<style>
             :root {

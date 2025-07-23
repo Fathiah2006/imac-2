@@ -6,7 +6,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
         $classes = empty($item->classes) ? array() : (array) $item->classes;
-        $classes[] = 'menu-item-' . $item->ID;
+        $classes[] = 'nav-item menu-item-' . $item->ID;
 
 
         $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));

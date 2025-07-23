@@ -16,3 +16,6 @@
 
 get_header();
 
+get_template_part('template-parts/pages/index', get_post_format());
+
+get_footer();

@@ -1,13 +1,13 @@
 <?php
 
-global $pc_theme_mods;
+global $imac_theme_mods;
 
-$fp_slider_img1 = $pc_theme_mods['fp_slider_img1'];
-$fp_slider_img2 = $pc_theme_mods['fp_slider_img2'];
-$fp_slider_img3 = $pc_theme_mods['fp_slider_img3'];
-$fp_slider_img4 = $pc_theme_mods['fp_slider_img4'];
+$fp_slider_img1 = $imac_theme_mods['fp_slider_img1'];
+$fp_slider_img2 = $imac_theme_mods['fp_slider_img2'];
+$fp_slider_img3 = $imac_theme_mods['fp_slider_img3'];
+$fp_slider_img4 = $imac_theme_mods['fp_slider_img4'];
 
-$fp_video_showcase = $pc_theme_mods['fp_video_showcase'];
+$fp_video_showcase = $imac_theme_mods['fp_video_showcase'];
 
 ?>
 

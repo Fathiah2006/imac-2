@@ -10,14 +10,14 @@
 
 // Modify Default HTML structure for post thumbnail
 function modify_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-    global $pc_theme_mods;
+    global $imac_theme_mods;
     $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
     $src = wp_get_attachment_image_src( $id, $size ); // gets the image url specific to the passed in size (aka. custom image size)
     $alt = get_the_title( $id ); // gets the post thumbnail title
     $class = $attr['class']; // gets classes passed to the post thumbnail, defined here for easier function access
 
-    if($pc_theme_mods['placeholder_img']) {
-        $placeholder = $pc_theme_mods['placeholder_img'];
+    if($imac_theme_mods['placeholder_img']) {
+        $placeholder = $imac_theme_mods['placeholder_img'];
     }else {
         $placeholder = get_imac_assets( 'img' ) . 'placeholder.jpg';
     }

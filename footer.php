@@ -6,7 +6,7 @@
  * @package imac-france
  */
 
-global $pureFolioThemeMods;
+global $imac_theme_mods;
 
 if (is_active_sidebar('footer-widget-one') || is_active_sidebar('footer-widget-two') || is_active_sidebar('footer-widget-three') || is_active_sidebar('footer-widget-four')) {
     $footerColumns = true;
@@ -16,47 +16,49 @@ if (is_active_sidebar('footer-widget-one') || is_active_sidebar('footer-widget-t
 
 ?>
 <footer class="footer col-12">
-    <?php if ($footerColumns) : ?>
-        <div class="footerColumns grid">
-            <?php if (is_active_sidebar('footer-widget-one')) : ?>
-                <div class="column">
-                    <?php dynamic_sidebar('footer-widget-one'); ?>
-                </div>
-            <?php endif; ?>
+    <div class="parent-container">
+        <?php if ($footerColumns) : ?>
+            <div class="footerColumns grid">
+                <?php if (is_active_sidebar('footer-widget-one')) : ?>
+                    <div class="column">
+                        <?php dynamic_sidebar('footer-widget-one'); ?>
+                    </div>
+                <?php endif; ?>
+        
+                <?php if (is_active_sidebar('footer-widget-two')) : ?>
+                    <div class="column">
+                        <?php dynamic_sidebar('footer-widget-two'); ?>
+                    </div>
+                <?php endif; ?>
+        
+                <?php if (is_active_sidebar('footer-widget-three')) : ?>
+                    <div class="column">
+                        <?php dynamic_sidebar('footer-widget-three'); ?>
+                    </div>
+                <?php endif; ?>
+        
+                <?php if (is_active_sidebar('footer-widget-four')) : ?>
+                    <div class="column">
+                        <?php dynamic_sidebar('footer-widget-four'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     
-            <?php if (is_active_sidebar('footer-widget-two')) : ?>
-                <div class="column">
-                    <?php dynamic_sidebar('footer-widget-two'); ?>
-                </div>
-            <?php endif; ?>
+        <div class="footer-b flex flex-center">
+            <?php
+            if ($imac_theme_mods['toggle_footer_copyright']) {
+                echo imac_copyright();
+            }
+            if ($imac_theme_mods['toggle_footer_dev_credits']) {
+                echo imac_author_url('https://eshomonu.com', 'Emmanuel Olowu');
+            }
+            if ($imac_theme_mods['toggle_footer_platform_info']) {
+                echo the_wp_link();
+            }
+            ?>
     
-            <?php if (is_active_sidebar('footer-widget-three')) : ?>
-                <div class="column">
-                    <?php dynamic_sidebar('footer-widget-three'); ?>
-                </div>
-            <?php endif; ?>
-    
-            <?php if (is_active_sidebar('footer-widget-four')) : ?>
-                <div class="column">
-                    <?php dynamic_sidebar('footer-widget-four'); ?>
-                </div>
-            <?php endif; ?>
         </div>
-    <?php endif; ?>
-
-    <div class="footer-b flex flexCenter">
-        <?php
-        // if ($pureFolioThemeMods['toggle_footer_copyright']) {
-        //     echo pureFolio_copyright();
-        // }
-        // if ($pureFolioThemeMods['toggle_footer_dev_credits']) {
-        //     echo pureFolio_author_url('https://eshomonu.com', 'Emmanuel Olowu');
-        // }
-        // if ($pureFolioThemeMods['toggle_footer_platform_info']) {
-        //     echo the_wp_link();
-        // }
-        ?>
-
     </div>
 </footer>
 

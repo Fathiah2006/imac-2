@@ -9,25 +9,27 @@
 
 */
 
-global $pc_theme_mods;
+global $imac_theme_mods;
 
 ?>
 
 <section class="wrapper col-12">
     <?php
-        if ($pc_theme_mods['toggle_hero_header_sec'] == true) {
+        if ($imac_theme_mods['toggle_hero_header_sec'] == true) {
             get_template_part('template-parts/front-page/hero-header', get_post_format());
         }
 
-        if ($pc_theme_mods['toggle_slider_video_sec'] == true) {
+        if ($imac_theme_mods['toggle_slider_video_sec'] == true) {
             get_template_part('template-parts/front-page/slider-video', get_post_format());
         }
 
-        if ($pc_theme_mods['toggle_web_portals_sec'] == true) {
+        if ($imac_theme_mods['toggle_web_portals_sec'] == true) {
             get_template_part('template-parts/front-page/web-portals', get_post_format());
         }
 
-        if ($pc_theme_mods['toggle_partners_sec'] == true) {
+        get_template_part('template-parts/front-page/map', get_post_format());
+
+        if ($imac_theme_mods['toggle_partners_sec'] == true) {
             get_template_part('template-parts/front-page/partners', get_post_format());
         }
 

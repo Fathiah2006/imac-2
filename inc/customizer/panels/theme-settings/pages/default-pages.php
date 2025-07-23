@@ -6,8 +6,8 @@
 $wp_customize->add_section(
     'pages_default_settings',
     array(
-        'title'    => __('Default Settings For Pages', 'pure-commerce'),
-        'description' => esc_html__('The settings on here, are the defualt settings for all pages across your website. Visit a page to see your changes reflect there.', 'pure-commerce'),
+        'title'    => __('Default Settings For Pages', 'imac'),
+        'description' => esc_html__('The settings on here, are the defualt settings for all pages across your website. Visit a page to see your changes reflect there.', 'imac'),
         'panel' => 'pages_panel_id',
     )
 );
@@ -28,8 +28,8 @@ $wp_customize->add_control(new WP_Customize_Image_Control(
     $wp_customize,
     'pages_hero_header_img',
     array(
-        'label' => __('Default Hero Header Background Image', 'pure-commerce'),
-        'description' => esc_html__('Change the default background image for all pages. This will not affect pages where you explicitly set a different image.', 'pure-commerce'),
+        'label' => __('Default Hero Header Background Image', 'imac'),
+        'description' => esc_html__('Change the default background image for all pages. This will not affect pages where you explicitly set a different image.', 'imac'),
         'section'  => 'pages_default_settings',
         'settings' => 'pages_hero_header_img',
         'button_labels' => array( // Optional.
@@ -55,8 +55,8 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     $wp_customize,
     'toggle_pages_featured_img',
     array(
-        'label' => __('Featured Image', 'pure-commerce'),
-        'description' => esc_html__('Use this toggle to Disable or Enable the Featured Image on your site\'s pages.', 'pure-commerce'),
+        'label' => __('Featured Image', 'imac'),
+        'description' => esc_html__('Use this toggle to Disable or Enable the Featured Image on your site\'s pages.', 'imac'),
         'section'  => 'pages_default_settings',
         'settings'   => 'toggle_pages_featured_img',
     )

@@ -1,6 +1,6 @@
 <?php
 
-global $pc_theme_mods;
+global $imac_theme_mods;
 
 $posts_per_page = get_option('posts_per_page'); // get the number from wordpress settings
 $paged = get_query_var('paged') ? get_query_var('paged') : 1; // get the current page number
@@ -16,9 +16,9 @@ $blog_query = new WP_Query(array(
 <section class="all-post">
     <?php if ($blog_query->have_posts()) : ?>
 
-        <?php if ($pc_theme_mods['toggle_blog_page_title']) : ?>
+        <?php if ($imac_theme_mods['toggle_blog_page_title']) : ?>
             <div class="all-post-title">
-                <div class="title"> <?php echo $pc_theme_mods['blog_page_title']; ?> </div>
+                <div class="title"> <?php echo $imac_theme_mods['blog_page_title']; ?> </div>
             </div>
         <?php endif; ?>
 

@@ -17,9 +17,9 @@
  * @param array $args       Optional. Optional custom data to pass to filter.
  * @return string The final HTML attribute string.
  */
-function pc_set_html_attrs($context, $attributes = array(), $args = array()) {
+function imac_set_html_attrs($context, $attributes = array(), $args = array()) {
             
-    $attributes = pc_parse_attr( $context, $attributes, $args );
+    $attributes = imac_parse_attr( $context, $attributes, $args );
 
     // Initialize an empty string to hold attribute output
     $attr_string = '';
@@ -42,7 +42,7 @@ function pc_set_html_attrs($context, $attributes = array(), $args = array()) {
 	}
             
     // Apply a filter for the specific context to allow customization
-    $attr_string = apply_filters( "pc_attr_{$context}_output",  $attr_string, $attributes, $context, $args );
+    $attr_string = apply_filters( "imac_attr_{$context}_output",  $attr_string, $attributes, $context, $args );
 
     return trim( $attr_string );
 }
@@ -51,7 +51,7 @@ function pc_set_html_attrs($context, $attributes = array(), $args = array()) {
 /**
  * Merge array of attributes with defaults, and apply contextual filter on array.
  * 
- * The contextual filter is of the form `pc_attr_{context}`.
+ * The contextual filter is of the form `imac_attr_{context}`.
  * 
  * @since 1.0.0
  * 
@@ -60,7 +60,7 @@ function pc_set_html_attrs($context, $attributes = array(), $args = array()) {
  * @param array  $args       Optional. Custom data to pass to filter.
  * @return array Merged and filtered attributes.
  */
-function pc_parse_attr( $context, $attributes = array(), $args = array() ) {
+function imac_parse_attr( $context, $attributes = array(), $args = array() ) {
 
 	$defaults = array(
 		'class' => sanitize_html_class( $context ),
@@ -69,7 +69,7 @@ function pc_parse_attr( $context, $attributes = array(), $args = array() ) {
 	$attributes = wp_parse_args( $attributes, $defaults );
 
 	// Contextual filter.
-	return apply_filters( "pc_attr_{$context}", $attributes, $context, $args );
+	return apply_filters( "imac_attr_{$context}", $attributes, $context, $args );
 }
 
 /**
@@ -77,10 +77,10 @@ function pc_parse_attr( $context, $attributes = array(), $args = array() ) {
  */
 function theme_post_thumb( $class = '' ) {
     
-    global $pc_theme_mods;
+    global $imac_theme_mods;
     $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
     $alt = get_the_title($id); // gets the post thumbnail title
-    $user_img_placeholder = $pc_theme_mods['placeholder_img'];
+    $user_img_placeholder = $imac_theme_mods['placeholder_img'];
     $default_img_placeholder = get_template_directory_uri() . '/assets/img/placeholder.jpg';
 
     if ( has_post_thumbnail() ) {
@@ -96,7 +96,7 @@ function theme_post_thumb( $class = '' ) {
 /**
  * COPYRIGHT DATE IN FOOTER
  */
-function pure_commerce_copyright() {
+function imac_copyright() {
     global $wpdb;
     $copyright_dates = $wpdb->get_results("
 		SELECT
@@ -122,7 +122,7 @@ function pure_commerce_copyright() {
 /**
  * Format URL To Make Sure It Has "https://"
  */
-function pure_commerce_format_url( $url ) {
+function imac_format_url( $url ) {
     // Check if the URL starts with "http://" or "https://"
     if (! empty($url) && ! preg_match('/^https?:\/\//i', $url)) :
         $url = 'https://' . $url;
@@ -134,8 +134,8 @@ function pure_commerce_format_url( $url ) {
 /**
  * DISPLAY A LINK TO THEME AUTHOR'S PAGE
  */
-function pure_commerce_author_url( $url, $name ) {
-    $url = pure_commerce_format_url( $url );
+function imac_author_url( $url, $name ) {
+    $url = imac_format_url( $url );
 
     return '<div class="theme-author-link">' .
         sprintf(
@@ -204,8 +204,8 @@ function create_and_set_pages() {
 }
 
 
-if (!function_exists('pc_curl_get_file_contents')) {
-    function pc_curl_get_file_contents($URL) {
+if (!function_exists('imac_curl_get_file_contents')) {
+    function imac_curl_get_file_contents($URL) {
         $c = curl_init();
         curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($c, CURLOPT_URL, $URL);

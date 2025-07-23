@@ -1,6 +1,6 @@
 <?php
 
-global $pc_theme_mods;
+global $imac_theme_mods;
 
 $web_portals_ids = array(
     

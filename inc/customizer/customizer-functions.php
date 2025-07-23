@@ -1,10 +1,10 @@
 <?php
 
-if (!function_exists('pc_customizer_defaults')) {
+if (!function_exists('imac_customizer_defaults')) {
     /**
      * Default Values for customizer theme mods
      */
-    function pc_customizer_defaults () {
+    function imac_customizer_defaults () {
         $default_values = array(
             'placeholder_img'               => get_imac_assets('img') . 'placeholder.jpg',
             'background_color'              => get_theme_support('custom-background', 'default-color'),
@@ -65,7 +65,7 @@ if (!function_exists('pc_customizer_defaults')) {
             'toggle_linkedin_btn'           => false,
         );
 
-        return apply_filters('pc_customizer_default_values', $default_values);
+        return apply_filters('imac_customizer_default_values', $default_values);
     }
 }
 
@@ -130,13 +130,13 @@ if (!function_exists('get_excluded_page_ids')) {
     }
 }
 
-if (!function_exists('pc_get_customizer_pages')) {
+if (!function_exists('imac_get_customizer_pages')) {
     /**
      * Get published pages, excluding specific ones by slug.
      *
      * @return array List of WP_Post objects.
      */
-    function pc_get_customizer_pages() {
+    function imac_get_customizer_pages() {
 
         // Get IDs of excluded pages
         $excluded_ids = get_excluded_page_ids();
@@ -159,15 +159,15 @@ if (!function_exists('pc_get_customizer_pages')) {
 }
 
 
-if (!function_exists('pc_get_customizer_pages_ids')) {
+if (!function_exists('imac_get_customizer_pages_ids')) {
     /**
      * Get the IDs of all published pages excluding specified ones.
      *
      * @return array List of page IDs.
      */
-    function pc_get_customizer_pages_ids() {
+    function imac_get_customizer_pages_ids() {
         // Get all the IDs of Published Pages
-        $pages = pc_get_customizer_pages();
+        $pages = imac_get_customizer_pages();
 
         // Extract IDs using wp_list_pluck
         return wp_list_pluck($pages, 'ID');

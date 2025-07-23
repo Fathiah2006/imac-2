@@ -7,8 +7,8 @@
  */
 function get_icons_choices_as_json() {
     // Get the list of available icons
-    $icon_path = get_pure_commerce_assets('library/boxicons/css') . 'icon.classes.css';
-    $icon_file = pc_curl_get_file_contents($icon_path);
+    $icon_path = get_imac_assets('library/boxicons/css') . 'icon.classes.css';
+    $icon_file = imac_curl_get_file_contents($icon_path);
     preg_match_all('/\.(bx[l|s]?)\-(.*?):before/', $icon_file, $matches);
     $prefixes = $matches[1];
     $icons = $matches[2];
