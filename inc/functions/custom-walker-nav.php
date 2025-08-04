@@ -37,7 +37,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
             $item_output .= '<a' . $attributes . '>';
             /** This filter is documented in wp-includes/post-template.php */
             $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
-            $item_output .= '</a><i class="bx bxs-chevron-down arrow  "></i>';
+            $item_output .= '</a><i class=" bxs-chevron-down arrow  "></i>';
             $item_output .= $args->after;
         } elseif (!$hasChildren) {
             $item_output = $args->before;
