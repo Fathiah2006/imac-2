@@ -203,7 +203,7 @@ h1.article-card-title {
 
 .article-content ul li,
 .article-content ol li {
-    color: var(--body-txt-clr);
+    color: var(--box-txt-clr);
     margin: 0 0 14px;
 }
 
@@ -231,7 +231,7 @@ h1.article-card-title {
     border-top: 1px solid;
     border-bottom: 1px solid;
     margin-bottom: 11px;
-    color: var(--body-txt-clr);
+    color: var(--box-txt-clr);
 }
 
 
