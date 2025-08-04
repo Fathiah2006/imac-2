@@ -81,7 +81,7 @@ $imac_theme_mods = imac_get_theme_mods();
 
                 <div class="nav-content">
                         <div class="site-logo">
-                            <img src="http://localhost:94/wp/wp-content/themes/imac-2/assets/img/h-logo.png" alt="header logo" />
+                            <img src="<?php echo get_imac_assets( 'img' ) . 'imac-logo-trans.png'; ?>" alt="header logo" />
                         </div>
 
                         <?php

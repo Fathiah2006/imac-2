@@ -26,6 +26,10 @@ Body For single Post
     margin: 2px 0;
 }
 
+.article-card-title {
+    color: var(--theme-clr);
+}
+
 h1.article-card-title {
     font-size: 1.65em;
     font-weight: 800;
@@ -80,7 +84,7 @@ h1.article-card-title {
 
 .article-content {
     margin: 25px 0;
-    max-width: 999px;
+    max-width: 100%;
 }
 
 .article-content h1,
@@ -94,7 +98,7 @@ h1.article-card-title {
     line-height: 1.1em;
     text-align: left;
     margin: 25px 0 15px 0;
-    color: var(--body-txt-clr);
+    color: var(--theme-clr);
 }
 
 .article-content h1:after,
@@ -126,7 +130,8 @@ h1.article-card-title {
 .article-content p {
     font-family: var(--font-four);
     transition: var(--transition);
-    color: var(--body-txt-clr);
+    color: var(--box-txt-clr);
+    max-width: 100%;
 }
 .article-content a {
     font-family: inherit;

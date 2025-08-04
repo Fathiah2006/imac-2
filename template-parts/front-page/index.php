@@ -35,5 +35,7 @@ global $imac_theme_mods;
 
         get_template_part('template-parts/front-page/showcase-section', get_post_format());
 
+        get_template_part('template-parts/front-page/floating-bar', get_post_format());
+
     ?>
 </section>

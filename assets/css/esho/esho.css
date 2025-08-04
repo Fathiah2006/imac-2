@@ -51,7 +51,7 @@
 @media screen and (min-width: 1280px) {
     :root { 
         --site-pad: 15px;
-        --site-width: 75em
+        --site-width: 80em
     }
 }
 
@@ -79,8 +79,9 @@ html {
 body {
     --body-bg-clr: #252424de;
     --body-txt-clr: #F4F6F8;
-    --box-bg-clr: #444444cc;
-    --box-bg-clr-solid: #444444;
+    --box-bg-clr: #ffffffcc;
+    --box-txt-clr: #252424;
+    --box-bg-clr-solid: #FFFFFF;
     --tertiary-clr: #59626f;
     --brightness: brightness(100%) contrast(1);
 }
@@ -362,7 +363,7 @@ p {
 
 .card {
     position: relative;
-    color: var(--body-txt-clr);
+    color: var(--box-txt-clr);
     box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
     -webkit-box-shadow: var(--box-shadow);

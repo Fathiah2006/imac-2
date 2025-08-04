@@ -12,7 +12,7 @@
 */
 global $imac_theme_mods, $current_page_theme_mods, $post;
 $current_page_theme_mods = imac_get_current_page_mods( $post );
-$main_sec_width = ($current_page_theme_mods['toggle_sidebar']) ? 'col-8' : 'col-9';
+$main_sec_width = ($current_page_theme_mods['toggle_sidebar']) ? 'col-8' : 'col-12';
 
 ?>
 
