@@ -95,7 +95,7 @@
     list-style: none;
     visibility: hidden;
 }
-.nav-items li ul.sub-menu .bx {
+.menu-item-has-children .bx {
     display: none;
 }
 .nav-items li ul.sub-menu.open {
