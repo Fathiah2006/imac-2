@@ -42,4 +42,6 @@ $main_sec_width = ($current_page_theme_mods['toggle_sidebar']) ? 'col-8' : 'col-
 		<?php } ?>
 	</div>
 
+	<?php get_template_part('template-parts/front-page/partners', get_post_format()); ?>
+
 </section>

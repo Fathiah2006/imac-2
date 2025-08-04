@@ -85,6 +85,13 @@ function pure_commerce_scripts() {
     if ( is_page() ) {
         wp_enqueue_style( 'hero-header',     get_imac_assets( 'css' ) . 'hero-header.css' );
         wp_enqueue_style( 'pages',     get_imac_assets( 'css' ) . 'pages.css' );
+
+        if ( $imac_theme_mods['toggle_partners_sec'] == true ) {
+            wp_enqueue_style( 'splideCSS', get_imac_assets( 'library/splide/dist/css' ) . 'splide.min.css' );
+            wp_enqueue_script( 'splideJS', get_imac_assets( 'library/splide/dist/js' ) . 'splide.min.js', '', '4.1.3', true );
+            wp_enqueue_script( 'auto-scroll-splide', get_imac_assets( 'library/splide/auto-scroll/js' ) . 'auto-scroll.min.js', '', '4.1.3', true );
+            wp_enqueue_script( 'init-splide', get_imac_assets( 'library/splide' ) . 'init-splide.js', '', '4.1.3', true );
+        }
     }
 
     if (is_home( 'blog' )) {
