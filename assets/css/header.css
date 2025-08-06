@@ -24,18 +24,21 @@
 
 /* Header Logo & Nav */
 .nav-content {
-    --site-logo: 180px;
+    --site-logo: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    background-color: #fff;
+    height: 85px;
 }
 
 .site-logo {
     width: var(--site-logo);
     height: auto;
     position: absolute;
-    top: 10px;
-    left: 40px;
+    top: 0px;
+    left: 0px;
     z-index: 90;
 }
 
@@ -47,6 +50,17 @@
     border-radius: 10px;
     width: 100%;
     position: relative;
+    background-color: #fff;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 300px;
+    transition: var(--transition);
+}
+.nav-content nav.active{
+    right: 0px;
 }
 
 #nav>ul,
@@ -59,7 +73,7 @@
     gap: 10px 50px;
     align-items: center;
     border-radius: 10px;
-    width: calc(100% - var(--site-logo) + 40px);
+    width: calc(100%);
     float: right;
     justify-content: right;
 }
@@ -86,7 +100,7 @@
     z-index: 80;
     position: absolute;
     left: 0;
-    top: 54px;
+    top: 100px;
     width: 100%;
     background-color: #fff;
     z-index: 80;
@@ -101,6 +115,30 @@
 .nav-items li ul.sub-menu.open {
     display: block;
     visibility: visible;
+}
+
+@media screen and (min-width: 999px) {
+    .nav-content {
+        --site-logo: 180px;
+        position: unset;
+        background-color: transparent;
+        height: unset;
+    }
+
+    .site-logo {
+        top: 10px;
+        left: 40px;
+    }
+    .nav-content nav {
+        background-color: transparent;
+        display: block;
+        position: unset;
+        width: 100%;
+    }
+    #nav>ul,
+    .nav-items {
+        width: calc(100% - var(--site-logo) + 40px);
+    }
 }
 
 /* Progress */

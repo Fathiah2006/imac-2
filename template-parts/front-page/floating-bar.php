@@ -11,9 +11,14 @@ global $imac_theme_mods;
             right: 0px;
             top: 50px;
             z-index: 200;
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: end;
+        }
+        @media screen and (min-width: 999px) {
+            .floating-bar {
+                display: flex;
+            }
         }
         .social-bars {
             background-color: #0c0c0c;
