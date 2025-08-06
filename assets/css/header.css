@@ -76,6 +76,7 @@
     width: calc(100%);
     float: right;
     justify-content: right;
+    flex-direction: column;
 }
 
 #nav>ul li,
@@ -138,6 +139,7 @@
     #nav>ul,
     .nav-items {
         width: calc(100% - var(--site-logo) + 40px);
+        flex-direction: row;
     }
 }
 
