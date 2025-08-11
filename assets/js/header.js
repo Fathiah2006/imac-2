@@ -1,6 +1,15 @@
 const siteHeader = document.querySelector("#site-header");
+let navBox = document.querySelector(".nav-box");
+let navLinks = document.querySelector(".nav-links");
 
 siteHeader.addEventListener("click", (e) => {
+    if (e.target.classList.contains("menuBtn")) {
+		navBox.classList.add("active");
+	}
+    if (e.target.classList.contains('menuCloseBtn') || e.target.classList.contains('nav-overlay')) {
+        navBox.classList.remove("active");
+    }
+
     const dropdownMenu = e.target.closest(".menu-item-has-children");
     if (!dropdownMenu) return;
 

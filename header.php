@@ -84,22 +84,32 @@ $imac_theme_mods = imac_get_theme_mods();
                             <img src="<?php echo get_imac_assets( 'img' ) . 'imac-logo-trans.png'; ?>" alt="header logo" />
                         </div>
 
-                        <?php
-                            $menu_args = array(
-                                'menu_class' => 'nav-items',
-                                'menu_id' => 'nav',
-                                'theme_location' => 'main-nav-menu',
-                                'container' => 'nav',
-                                'container_class' => 'nav',
-                                'container_id' => 'nav',
-                            );
-                            if (has_nav_menu('main-nav-menu')) {
-                                $menu_args['menu_class'] = 'nav-items';
-                                $menu_args['menu_id'] = '';
-                                $menu_args['walker'] = new Custom_Walker_Nav_Menu();
-                            }
-                            wp_nav_menu($menu_args);
-                        ?>
+                        <div class="actionBtns flex flexCenter">
+                            <span class="menuBtn icoBtn btn"> <i class='bx bx-menu'></i> </span>
+                        </div>
+
+                        <div class="nav-box">
+                            <div class="nav-actionBtns flexSB flex flex-center">
+                                <span class="menuCloseBtn icoBtn"> <i class='bx bx-x'></i> </span>
+                            </div>
+
+                            <?php
+                                $menu_args = array(
+                                    'menu_class' => 'nav-items',
+                                    'menu_id' => 'nav',
+                                    'theme_location' => 'main-nav-menu',
+                                    'container' => 'nav',
+                                    'container_class' => 'nav',
+                                    'container_id' => 'nav',
+                                );
+                                if (has_nav_menu('main-nav-menu')) {
+                                    $menu_args['menu_class'] = 'nav-items';
+                                    $menu_args['menu_id'] = '';
+                                    $menu_args['walker'] = new Custom_Walker_Nav_Menu();
+                                }
+                                wp_nav_menu($menu_args);
+                            ?>
+                        </div>
                 </div>
             </div>
         </div>
