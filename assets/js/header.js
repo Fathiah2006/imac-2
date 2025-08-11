@@ -1,43 +1,42 @@
 const siteHeader = document.querySelector("#site-header");
 let navBox = document.querySelector(".nav-box");
-let navLinks = document.querySelector(".nav-links");
 
 siteHeader.addEventListener("click", (e) => {
-    if (e.target.classList.contains("menuBtn")) {
+	// Toggle mobile menu visibility
+	if (e.target.classList.contains("menuBtn")) {
 		navBox.classList.add("active");
 	}
-    if (e.target.classList.contains('menuCloseBtn') || e.target.classList.contains('nav-overlay')) {
-        navBox.classList.remove("active");
-    }
+	if (
+		e.target.classList.contains("menuCloseBtn") ||
+		e.target.classList.contains("nav-overlay")
+	) {
+		navBox.classList.remove("active");
+	}
 
-    const dropdownMenu = e.target.closest(".menu-item-has-children");
-    if (!dropdownMenu) return;
+	// Handle dropdown menus
+	const dropdownMenu = e.target.closest(".menu-item-has-children");
+	if (!dropdownMenu) return;
 
-    if (dropdownMenu) {
-        e.preventDefault();
-        const navMenu = dropdownMenu.parentNode;
-        const navMenuParent = navMenu.parentNode;
-        const navMenuHeight = `${navMenu.scrollHeight}px`;
-		const submenu = dropdownMenu.querySelector(".sub-menu");
+	// Check if clicked element is a submenu link
+	const isSubmenuLink = e.target.closest(".sub-menu a") !== null;
+	if (isSubmenuLink) return; // Allow default link behavior
 
-        const submenuHeight = submenu ? `${submenu.scrollHeight}px` : "0px";
-        const isOpen = dropdownMenu.classList.contains("open");
+	e.preventDefault(); // Only prevent default for non-link elements
+	const submenu = dropdownMenu.querySelector(".sub-menu");
+	if (!submenu) return;
 
-        if (isOpen) {
-            dropdownMenu.classList.remove("open");
-            setTimeout(() => {
-				submenu ? (submenu.style.height = "0px") : {};
-				submenu.classList.remove("open");
-                submenu.style.height = submenuHeight;
-                navMenuParent ? (navMenuParent.style.height = "") : {};
-			}, 10);
-        } else {
-            setTimeout(() => {
-				submenu ? (submenu.style.height = submenuHeight) : {};
-                navMenuParent ? (navMenuParent.style.height = submenuHeight) : {};
-				submenu.classList.toggle("open");
-			}, 10);
-            dropdownMenu.classList.add("open");
-        }
-    }
+	const isOpen = dropdownMenu.classList.contains("open");
+	const submenuHeight = `${submenu.scrollHeight}px`;
+
+	if (isOpen) {
+		// Close the submenu
+		dropdownMenu.classList.remove("open");
+		submenu.style.height = "0px";
+		submenu.classList.remove("open");
+	} else {
+		// Open the submenu
+		dropdownMenu.classList.add("open");
+		submenu.style.height = submenuHeight;
+		submenu.classList.add("open");
+	}
 });
